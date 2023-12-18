@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Open sans';
+    src: url(../fonts/OpenSans-Regular.woff2) format('.woff2'), 
+        url(../fonts/OpenSans-Regular.woff) format('woff');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Open sans';
+    src: url(../fonts/OpenSans-Bold.woff2) format('.woff2'), 
+        url(../fonts/OpenSans-Bold.woff) format('woff');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Open sans';
+    src: url(../fonts/OpenSans-SemiBold.woff2) format('.woff2'), 
+        url(../fonts/OpenSans-SemiBold.woff) format('woff');
+    font-style: normal;
+    font-weight: 600;
+}
+
+:root{
+    --max-width-desktop: 1604px;
+    --paddings-desktop: 50px;
+    --paddings-mobile: 15px;
+    --bg-black: #000;
+    --bg-white: #fff;
+    --text-white-color: #fff;
+    --text-black-color: #333;
+    --text-grey-color: #999;
+    --text-pupure-color: #9D5CD0;
+    --text-pink-color: #C283F3;
+    --text-dark-purpure-color: #7943A4;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+p{
+    margin: 0;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+button{
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
