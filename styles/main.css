@@ -30,15 +30,44 @@ header
     margin-right: 15px;
 }
 .header__link{
+    padding: 5px;
     font-family: 'Open sans';
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
     color: var(--text-white-color);
+    outline: none;
+    transition: color .1s linear,
+    background-color .1s linear;
+}
+.header__link:focus-visible{
+    background-color: var(--text-dark-purpure-color);
+}
+.header__link:hover:not(:focus-visible){
+    color: var(--text-pink-color);
+}
+.header__link:active:not(:focus-visible){
+    color: var(--text-dark-purpure-color);
 }
 .header__btns{
     display: flex;
     justify-content: flex-end;
+}
+.header__btn path,
+.header__btn rect{
+    transition: fill .1s linear,
+    background-color .1s linear;
+}
+.header__btn:focus-visible{
+    background-color: var(--text-dark-purpure-color);
+}
+.header__btn:hover:not(:focus-visible) path,
+.header__btn:hover:not(:focus-visible) rect{
+    fill: var(--text-pink-color);
+}
+.header__btn:active:not(:focus-visible) path,
+.header__btn:active:not(:focus-visible) rect{
+    fill: var(--text-dark-purpure-color);
 }
 .header__btn_search{
     display: flex;
@@ -131,6 +160,18 @@ hero
     line-height: 24px;
     color: var(--text-white-color);
     background-color: var(--text-pupure-color);
+    transition: color .1s linear,
+    background-color .1s linear;
+    cursor: pointer;
+}
+.hero__btn:focus-visible{
+    outline: thick double var(--text-dark-purpure-color);
+}
+.hero__btn:hover:not(:focus-visible){
+    outline: 2px solid var(--text-pink-color);
+}
+.hero__btn:active:not(:focus-visible){
+    background-color: var(--text-dark-purpure-color);
 }
 
 /* !!!!!!!!!!!
@@ -190,7 +231,23 @@ gallery
     margin-right: 50px;
 }
 .gallery__label{
+    outline: none;
     cursor: pointer;
+}
+.gallery__label:focus-visible span{
+    color: var(--text-purpure-color);
+}
+.gallery__label:focus-visible span::before{
+    border-color: var(--text-purpure-color);
+}
+.gallery__label:hover:not(:focus-visible) span::before{
+    border-color: var(--text-pink-color);
+}
+.gallery__label:active:not(:focus-visible) span{
+    color: var(--text-dark-purpure-color);
+}
+.gallery__label:active:not(:focus-visible) span::before{
+    border-color: var(--text-dark-purpure-color);
 }
 .gallery__input{
     display: none;
@@ -204,6 +261,7 @@ gallery
     font-size: 16px;
     line-height: 32px;
     color: var(--text-white-color);
+    transition: color .1s linear;
 }
 .gallery__checkbox::before{
     width: 10px;
@@ -391,7 +449,7 @@ events and news
     font-weight: 400;
     font-size: 16px;
     line-height: 32px;
-    color: var(--text-pupure-color);
+    color: var(--text-purpure-color);
 }
 .news__link::after{
     position: absolute;
@@ -399,7 +457,7 @@ events and news
     left: 0;
     height: 2px;
     width: 95%;
-    background-color: var(--text-pupure-color);
+    background-color: var(--text-purpure-color);
     content: '';
 }
 
@@ -490,6 +548,7 @@ callback
 .callback__label{
     position: relative;
     flex-basis: 23%;
+    display: block;
 }
 .callback__error{
     position: absolute;
@@ -504,16 +563,39 @@ callback
     border-radius: 100px;
     border: 1px solid #333;
     outline: none;
+    transition: background-color .1s linear;
+}
+.callback__input:focus-visible{
+    background-color: #ECECEC;
+}
+.callback__input:hover:not(:focus-visible){
+    background-color: #ECECEC;
+}
+.callback__input:active:not(:focus-visible){
+    background-color: #ECECEC;
 }
 .callback__btn{
     padding: 12px 24px;
-    border: 1px solid var(--text-pupure-color);
+    border: 1px solid var(--text-purpure-color);
     border-radius: 100px;
     font-family: 'Open sans';
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
-    color: var(--text-pupure-color);
+    color: var(--text-purpure-color);
+    transition: color .1s linear,
+        background-color .1s linear;
+    cursor: pointer;
+}
+.callback__btn:focus-visible{
+    outline: thick double var(--text-dark-purpure-color);
+}
+.callback__btn:hover:not(:focus-visible){
+    outline: 2px solid var(--text-pink-color);
+}
+.callback__btn:active:not(:focus-visible){
+    background-color: var(--text-dark-purpure-color);
+    color: var(--text-white-color);
 }
 .callback__item{
     margin-right: 20px;
