@@ -23,7 +23,7 @@ header
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-basis: 74%;
+    flex-basis: 76%;
     margin-right: 40px;
 }
 .header__page:not(:last-child){
@@ -35,6 +35,10 @@ header
     font-size: 18px;
     line-height: 24px;
     color: var(--text-white-color);
+}
+.header__btns{
+    display: flex;
+    justify-content: flex-end;
 }
 .header_search{
     display: flex;
@@ -305,8 +309,8 @@ events and news
     background-position: center;
 }
 .news__img img{
-    min-height: 300px;
-    width: inherit;
+    height: 100%;
+    width: 100%;
 }
 .news__text{
     display: flex;
@@ -449,7 +453,14 @@ callback
     justify-content: space-between;
 }
 .callback__label{
+    position: relative;
     flex-basis: 23%;
+}
+.callback__error{
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    color: red;
 }
 .callback__input{
     width: 100%;
