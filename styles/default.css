@@ -36,6 +36,11 @@
     --text-dark-purpure-color: #7943A4;
 }
 
+body{
+    min-width: 320px;
+    overflow: hidden;
+}
+
 a{
     text-decoration: none;
     color: black;

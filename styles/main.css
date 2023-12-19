@@ -40,7 +40,7 @@ header
     display: flex;
     justify-content: flex-end;
 }
-.header_search{
+.header__btn_search{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,12 +48,47 @@ header
     height: 35px;
     cursor: pointer;
 }
-.header_search svg{
+.header__btn_search svg{
     width: 28px;
     height: 28px;
 }
-.header__burger{
+.header__btn_burger{
+    position: relative;
     display: none;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+.header__btn_burger span{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 95%;
+    height: 2px;
+    background-color: #fff;
+    transition: transform .1s linear;
+}
+.header__btn_burger::before{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 95%;
+    height: 2px;
+    background-color: #fff;
+    content: '';
+    transition: transform .1s linear,
+    top .1s linear;
+}
+.header__btn_burger::after{
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 95%;
+    height: 2px;
+    background-color: #fff;
+    content: '';
+    transition: transform .1s linear,
+    bottom .1s linear;
 }
 
 /* !!!!!!!!!!!

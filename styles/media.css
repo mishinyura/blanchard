@@ -373,7 +373,55 @@
     /* !!!!!!!!!!!
     header 
     !!!!!!!!!!!!*/
-    
+    .header{
+        min-height: initial;
+    }
+    .header__logo{
+        margin-bottom: 0;
+    }
+    .header__container{
+        position: relative;
+        flex-wrap: nowrap;
+    }
+    .header__nav{
+        position: absolute;
+        right: 0;
+        min-width: 300px;
+        max-width: 320px;
+        background-color: black;
+        transform: translateX(500px);
+        transition: transform .2s linear;
+    }
+    .header__nav.active{
+        transform: none;
+    }
+    .header__menu{
+        display: block;
+        padding: 70px 50px;
+    }
+    .header__page:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .header__btn:not(:last-child){
+        margin-right: 10px;
+    }
+    .header__btn_burger{
+        display: inline-block;
+        transition: transform .1s linear;
+        z-index: 1;
+    }
+    .header__btn_burger.active span{
+        transform: scaleX(0);
+    }
+    .header__btn_burger.active::before{
+        top: 45%;
+        transform: rotate(-45deg);
+    }
+    .header__btn_burger.active::after{
+        bottom: 45%;
+        transform: rotate(45deg);
+    }
 
     /* !!!!!!!!!!!
     hero 
